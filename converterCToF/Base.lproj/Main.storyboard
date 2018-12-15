@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +13,68 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="converterCToF" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aYJ-9S-JmK">
+                                <rect key="frame" x="121" y="426.5" width="133" height="59"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="39"/>
+                                <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <state key="normal" title="Convert">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                    <color key="titleShadowColor" cocoaTouchSystemColor="lightTextColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="myButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="yAy-xp-lJx"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jfU-qP-4bw">
+                                <rect key="frame" x="104" y="318.5" width="167" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="decimalPad" keyboardAppearance="alert"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="My Converter App !!!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yvj-qC-9kh">
+                                <rect key="frame" x="16" y="45" width="343" height="93"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="29"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please enter the value you like to convert from C to F" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tok-5e-YcC">
+                                <rect key="frame" x="16" y="172" width="343" height="41"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="yvj-qC-9kh" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="ID4-5Y-MVW"/>
+                            <constraint firstItem="aYJ-9S-JmK" firstAttribute="top" secondItem="jfU-qP-4bw" secondAttribute="bottom" constant="78" id="IKG-ew-Hqn"/>
+                            <constraint firstItem="Tok-5e-YcC" firstAttribute="centerX" secondItem="jfU-qP-4bw" secondAttribute="centerX" id="ODl-T9-Mvy"/>
+                            <constraint firstItem="Tok-5e-YcC" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="152" id="Pm7-hh-tgq"/>
+                            <constraint firstItem="yvj-qC-9kh" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="25" id="QpT-EK-KQ2"/>
+                            <constraint firstItem="jfU-qP-4bw" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="104" id="T2h-G0-enX"/>
+                            <constraint firstItem="Tok-5e-YcC" firstAttribute="centerX" secondItem="aYJ-9S-JmK" secondAttribute="centerX" id="az2-eG-Efk"/>
+                            <constraint firstItem="Tok-5e-YcC" firstAttribute="top" secondItem="yvj-qC-9kh" secondAttribute="bottom" constant="34" id="dMD-fy-Vn0"/>
+                            <constraint firstItem="yvj-qC-9kh" firstAttribute="centerX" secondItem="Tok-5e-YcC" secondAttribute="centerX" id="eNs-fJ-0dI"/>
+                            <constraint firstItem="Tok-5e-YcC" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="izy-Wh-Gut"/>
+                            <constraint firstItem="jfU-qP-4bw" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="q2j-Jd-FAk"/>
+                            <constraint firstItem="Tok-5e-YcC" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="uA7-f3-NBf"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="myButton" destination="aYJ-9S-JmK" id="YiV-i1-Off"/>
+                        <outlet property="myLabel" destination="Tok-5e-YcC" id="ncm-Zo-zKu"/>
+                        <outlet property="myTextfield" destination="jfU-qP-4bw" id="YEx-tK-tTd"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="133.5832083958021"/>
         </scene>
     </scenes>
 </document>
